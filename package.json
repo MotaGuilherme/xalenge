@@ -1,0 +1,28 @@
+{
+  "name": "xalenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": " "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.17",
+    "mongoose": "^5.11.15",
+    "mysql2": "^2.2.5",
+    "pg": "^8.5.1",
+    "restify": "^8.5.1",
+    "restify-errors": "^8.0.2"
+  }
+}
