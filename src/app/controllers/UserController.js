@@ -1,5 +1,5 @@
 const conn = require('../database/conn')
-const encrypt = require('../app/utils/encryptPassword')
+const encrypt = require('../utils/encryptPassword')
 
 module.exports = {
 
@@ -10,7 +10,7 @@ module.exports = {
 
         const user = await conn('user')
         .insert({
-          
+         
             email,
             login,
             password: passCrypted
@@ -21,7 +21,7 @@ module.exports = {
         return response.status(201).send({
             mensagem: {
                 "User Created": {
-                    "Name": name,
+                   
                     "email": email,
                     "login": login,
                 }
@@ -32,7 +32,7 @@ module.exports = {
 
     async listAll(request, response) {
         const user = await conn('user')
-        .select('id', 'login', 'email')
+        .select('id',  'login', 'email')
 
         return response.status(200).json({user})
     },
@@ -42,7 +42,7 @@ module.exports = {
         const { id } = request.params;
 
         const userFilterd = await conn('user')
-        .select('id', 'login', 'email')
+        .select('id',  'login', 'email')
         .where('id', id)
 
         return response.status(200).json({userFilterd})

@@ -1,7 +1,8 @@
 const express = require('express');
-const UserController = require('../../controllers/UserController');
+const UserController = require('../../app/controllers/UserController');
 const userRoute = express.Router();
-const authMiddleware = require('../../mid/auth.middleware')
+const authMiddleware = require('../../app/middlewares/jwt.middleware')
+
 
 userRoute.post('/user' ,UserController.create)
 userRoute.get('/user', authMiddleware,UserController.listAll)

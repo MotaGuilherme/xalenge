@@ -1,6 +1,5 @@
 const knex = require('knex')
-const conf = require('../../knexfile')
+const conf = require('../../../knexfilemy')
 const env = conf.development
 const conn = knex(env)
-
-module.exports = conn
+module.exports = connmy

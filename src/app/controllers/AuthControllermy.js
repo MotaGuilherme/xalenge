@@ -1,6 +1,6 @@
-const conn = require('../database/conn')
+const conn = require('../database/connmy')
 const bcrypt = require('bcrypt')
-const generateJwt = require('../utils/tokenzin');
+const generateJwt = require('../utils/jwtmy');
 module.exports = {
     async auth(request, response) {
         const {login, password} = request.body

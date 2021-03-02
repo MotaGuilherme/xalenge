@@ -3,10 +3,10 @@
 module.exports = {
 
   development: {
-    client: 'postgresql',
+    client: 'mysql2',
     connection: {
-         database: 'medium-express',
-         user: 'postgres',
+         database: 'mysqlbd',
+         user: 'root',
          password: '123456'
     },
     pool: {

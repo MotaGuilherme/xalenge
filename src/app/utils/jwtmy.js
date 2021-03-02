@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const config = require('../config/jwt.config.json')
+const config = require('../configs/jwt.configmy.json')
 module.exports = {
     async generateJwt(params = {}){
         return await jwt.sign(params, config.secret, {
